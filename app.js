@@ -70,7 +70,7 @@ function makePlot(nameID){
              {
                  domain: { x: [0, 1], y: [0, 1] },
                  value: meta[samplesID].wfreq,
-                 title: { text: "Belly Button Washin Frequency" },
+                 title: { text: "Belly Button Washing Frequency" },
                  type: "indicator",
                  mode: "gauge+number",
                  gauge: { axis: { range: [null, 9] },
