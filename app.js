@@ -76,13 +76,15 @@ function makePlot(nameID){
                  gauge: { axis: { range: [null, 9] },
                  bar:{color: "orange"},
                     steps: [
-                     { range: [0, 2], color: "rgba(255, 255, 255, 0)"},
-                     { range: [2, 3], color: "rgba(232, 226, 202, .5)"},
-                     { range: [3, 4], color: "rgba(210, 206, 145, .5)"},
-                     { range: [4, 5], color: "rgba(202, 209, 95, .5)" },
-                     { range: [5, 6], color: "rgba(170, 202, 42, .5)"},
-                     { range: [6, 8], color: "rgba(110, 154, 22, .5)"},
-                     { range: [8, 9], color: "rgba(14, 127, 0, .5)"}
+                     { range: [0, 1], color: "rgba(248, 243, 236, 1)"},
+                     { range: [1, 2], color: "rgba(244, 241, 228, 1)"},
+                     { range: [2, 3], color: "rgba(233, 230, 201, 1)"},
+                     { range: [3, 4], color: "rgba(229, 232, 176, 1)"},
+                     { range: [4, 5], color: "rgba(213, 229, 153, 1)"},
+                     { range: [5, 6], color: "rgba(183, 205, 143, 1)"},
+                     { range: [6, 7], color: "rgba(138, 192, 134, 1)"},
+                     { range: [7, 8], color: "rgba(136, 188, 141, 1)"},
+                     { range: [8, 9], color: "rgba(132, 181, 136, 1)"}
                    ]}
              }
          ];
@@ -91,7 +93,7 @@ function makePlot(nameID){
          Plotly.newPlot("gauge", data1, gaugeLayout);
 
          // Make the meta info
-         var metadata=d3.select("#sample-metadata");
+         var metadata = d3.select("#sample-metadata");
          metadata.html('');
          Object.entries(meta[samplesID]).forEach(([k,v]) => {
              metadata.append('p').text(`${k.toUpperCase()}:\n${v}`);
